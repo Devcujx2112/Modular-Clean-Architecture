@@ -5,11 +5,14 @@ homepage:
 
 environment:
   sdk: ^3.8.1
-  flutter: ">=1.17.0"
 
 dependencies:
+  dio: any
   flutter:
     sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  melos: ^6.3.3
 
 dev_dependencies:
   flutter_test:
