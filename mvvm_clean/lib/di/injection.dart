@@ -5,4 +5,4 @@ import 'package:mvvm_clean/di/injection.config.dart';
 final getIt = GetIt.instance;
 
 @InjectableInit() 
-void configureDependencies() => getIt.init();
+void configureDependencies(String? environment) => getIt.init(environment: environment);
