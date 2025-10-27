@@ -10,8 +10,22 @@ comands:
 
     dependencies:
       dio: ^5.8.0
+      get_it: ^8.2.0
+      injectable: ^2.5.2
+      json_annotation: ^4.9.0
 
-    dev_dependencies: 
+    dev_dependencies:
+      json_serializable: ^6.11.1
+      build_runner: ^2.10.1
+      injectable_generator: ^2.9.0
       flutter_test:
         sdk: flutter
       flutter_lints: ^5.0.0
+
+scripts:
+  clean: melos clean
+  cleanAndBootstrap: melos clean && melos bootstrap
+  test:
+    run: melos exec --concurrency=1 -- flutter test
+  update: flutter pub outdated
+  upgrade: flutter pub upgrade --major-versions

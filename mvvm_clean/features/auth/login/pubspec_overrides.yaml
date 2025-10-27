@@ -1,0 +1,4 @@
+# melos_managed_dependency_overrides: data
+dependency_overrides:
+  data:
+    path: ../../../core/data
