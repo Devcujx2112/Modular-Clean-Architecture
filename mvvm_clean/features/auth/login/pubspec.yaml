@@ -9,6 +9,8 @@ environment:
 dependencies:
   data:
     path: ../../../core/data
+  datastore:
+    path: ../../../core/datastore
   dio: any
   flutter:
     sdk: flutter
