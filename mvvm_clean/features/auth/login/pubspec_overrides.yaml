@@ -1,4 +1,6 @@
-# melos_managed_dependency_overrides: data
+# melos_managed_dependency_overrides: data,datastore
 dependency_overrides:
   data:
     path: ../../../core/data
+  datastore:
+    path: ../../../core/datastore
