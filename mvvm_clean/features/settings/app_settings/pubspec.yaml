@@ -7,6 +7,8 @@ environment:
   sdk: ^3.8.1
 
 dependencies:
+  get_it: ^8.2.0
+  injectable: ^2.5.2
   dio: any
   flutter:
     sdk: flutter
