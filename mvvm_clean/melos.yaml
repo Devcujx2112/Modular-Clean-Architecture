@@ -15,6 +15,7 @@ comands:
       json_annotation: ^4.9.0
       pretty_dio_logger: ^1.4.0
       retrofit: ^4.8.0
+      dartz: ^0.10.1
 
     dev_dependencies:
       json_serializable: ^6.11.1

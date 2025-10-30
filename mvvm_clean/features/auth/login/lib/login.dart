@@ -1,5 +1,6 @@
 import 'package:data/data.dart';
 import 'package:datastore/provider/SessionProviderImpl.dart';
+
 /// A Calculator.
 class Calculator {
   /// Returns [value] plus 1.
