@@ -7,11 +7,13 @@ environment:
   sdk: ^3.8.1
 
 dependencies:
+  json_annotation: ^4.9.0
   data:
     path: ../../../core/data
   datastore:
     path: ../../../core/datastore
   dio: any
+  retrofit: ^4.8.0
   flutter:
     sdk: flutter
 
@@ -19,9 +21,12 @@ dependencies:
   melos: ^6.3.3
 
 dev_dependencies:
+  json_serializable: ^6.11.1
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
+  retrofit_generator: ^10.1.1
+  build_runner: ^2.10.1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
