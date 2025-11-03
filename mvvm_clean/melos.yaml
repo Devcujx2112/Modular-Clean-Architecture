@@ -16,6 +16,7 @@ comands:
       pretty_dio_logger: ^1.4.0
       retrofit: ^4.8.0
       dartz: ^0.10.1
+      connectivity_plus: ^7.0.0
 
     dev_dependencies:
       json_serializable: ^6.11.1

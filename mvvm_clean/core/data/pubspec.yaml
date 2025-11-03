@@ -15,6 +15,7 @@ dependencies:
   flutter:
     sdk: flutter
   dartz: ^0.10.1
+  connectivity_plus: ^7.0.0
 
   cupertino_icons: ^1.0.8
   melos: ^6.3.3
