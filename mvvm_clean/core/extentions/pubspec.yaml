@@ -1,23 +1,15 @@
-name: data
+name: extentions
 description: "A new Flutter package project."
 version: 0.0.1
-publish_to: none
 homepage:
 
 environment:
   sdk: ^3.8.1
+  flutter: ">=1.17.0"
 
 dependencies:
-  pretty_dio_logger: ^1.4.0
-  dio: any
-  domain: 
-    path: ../../core/domain
   flutter:
     sdk: flutter
-  dartz: ^0.10.1
-
-  cupertino_icons: ^1.0.8
-  melos: ^6.3.3
 
 dev_dependencies:
   flutter_test:
