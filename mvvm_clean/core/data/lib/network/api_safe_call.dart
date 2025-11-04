@@ -9,9 +9,9 @@ Future<Either<Failure, T>> safeApiCall<T>(NetworkInfo networkInfo, Future<T> Fun
     final response = await apiCall();
     return Right(response);
   } catch (e) {
-    return Left(Failure(code: '0', message: LocalisedMessage(english: '', vietnamese: '')));
+    return Left(Failure(code: 0, message: LocalisedMessage(english: '', vietnamese: '')));
   }
   } else {
-    return Left(Failure(code: 'NO_INTERNET', message: LocalisedMessage(english: 'No internet connection', vietnamese: 'Không có kết nối internet')));
+    return Left(Failure(code: 1, message: LocalisedMessage(english: 'No internet connection', vietnamese: 'Không có kết nối internet')));
   }
 }
