@@ -1,17 +1,22 @@
 import 'package:dartz/dartz.dart';
+import 'package:data/error_handler/data_source.dart';
+import 'package:data/error_handler/data_source_extension.dart';
+import 'package:data/error_handler/dio_error_handle.dart';
 import 'package:data/network_info/network_info.dart';
 import 'package:domain/model/failure.dart';
-import 'package:domain/model/localised_message.dart';
 
-Future<Either<Failure, T>> safeApiCall<T>(NetworkInfo networkInfo, Future<T> Function() apiCall) async {
-  if(await networkInfo.isConnected){
+Future<Either<Failure, T>> safeApiCall<T>(
+  NetworkInfo networkInfo,
+  Future<T> Function() apiCall,
+) async {
+  if (await networkInfo.isConnected) {
     try {
-    final response = await apiCall();
-    return Right(response);
-  } catch (e) {
-    return Left(Failure(code: 0, message: LocalisedMessage(english: '', vietnamese: '')));
-  }
+      final response = await apiCall();
+      return Right(response);
+    } catch (error) {
+      return Left(ErrorHandle.handle(error).failure);
+    }
   } else {
-    return Left(Failure(code: 1, message: LocalisedMessage(english: 'No internet connection', vietnamese: 'Không có kết nối internet')));
+    return Left(DataSource.noInternetConnection.getFailure());
   }
 }
